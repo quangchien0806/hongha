@@ -1,0 +1,135 @@
+.footer {
+  background-color: $color-name-prd;
+  padding-top: 80px;
+  padding-bottom: 37px;
+  .footer__list {
+    @include flex(flex-start, space-between, wrap);
+    border-bottom: 1px solid #333333;
+    padding-bottom: 64px;
+    .text-content {
+      color: #fff;
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 700;
+      margin-bottom: 23px;
+    }
+    .contact {
+      width: 30%;
+      .contact-type {
+        display: flex;
+        margin-bottom: 16px;
+        .logo-footer {
+          margin-right: 12px;
+        }
+        .text-footer {
+          font-size: 14px;
+          line-height: 24px;
+          color: $color-hotline;
+          font-weight: 500;
+          margin-top: -5px;
+          span {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    .products {
+      width: 15%;
+      .list-all {
+        .footer-link {
+          color: $color-hotline;
+          font-size: 14px;
+          line-height: 16px;
+          margin-bottom: 27px;
+          position: relative;
+          &:hover {
+            color: $color-moss-green;
+            text-decoration: underline;
+            transition: all 0.3s ease;
+            &::before {
+              position: absolute;
+              content: "";
+              background-color: $color-moss-green;
+              width: 3px;
+              height: 3px;
+              border-radius: 50%;
+              left: -10px;
+              top: 6px;
+            }
+          }
+        }
+      }
+    }
+    .contact__mail {
+      width: 30%;
+      .text-contact {
+        font-size: 13px;
+        line-height: 24px;
+        color: $color-hotline;
+        margin-bottom: 16px;
+      }
+      .send__form {
+        @include flex(flex-center, space-between);
+        background-color: transparent;
+        padding: 14px;
+        border: 1px solid #505050;
+        border-radius: 2px;
+        .send__input {
+          border: none;
+          background-color: transparent;
+          font-size: 14px;
+          line-height: 16px;
+          color: $color-time-day;
+        }
+        .send__button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .follow {
+    margin-top: 30px;
+    @include flex(flex-start, space-between);
+    .list__icon {
+      display: flex;
+      .text-follow {
+        font-size: 14px;
+        line-height: 16px;
+        color: $color-hotline;
+        margin-right: 40px;
+      }
+      i {
+        color: $color-hotline;
+        margin-right: 28px;
+      }
+    }
+    .address {
+      font-size: 14px;
+      line-height: 16px;
+      color: #858585;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    .footer__list {
+      .contact {
+        width: 50%;
+        margin-bottom: 20px;
+      }
+      .products {
+        width: 30%;
+        margin-bottom: 20px;
+      }
+      .contact__mail {
+        width: 50%;
+      }
+    }
+    .follow {
+      margin-top: 30px;
+    }
+  }
+}

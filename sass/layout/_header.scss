@@ -1,0 +1,193 @@
+.header {
+  &__top_on {
+    background-color: $color-background;
+    border: 1px solid $color-hotline;
+    .header__top {
+      @include flex(center, space-between);
+      padding: 5px 0;
+      .img-group {
+        margin-right: 8px;
+      }
+      .ionex-text {
+        font-size: 13px;
+        line-height: 24px;
+        color: $color-text-top;
+      }
+      .text__ionex {
+        @include flex(center, center);
+      }
+      .hotline {
+        background-color: $color-hotline;
+        border-radius: 20px;
+        @include flex(center, center);
+        padding: 6px;
+        span {
+          color: #000;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  &__menu_all {
+    position: relative;
+    background-color: #ffffff;
+    &.active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+    }
+    .header__menu {
+      @include flex(center, space-between);
+      .list__menu {
+        &.menu-scroll {
+          top: 0;
+        }
+        .menu {
+          @include flex(center, space-between);
+          .active-drop {
+            &:hover .drop-down {
+              transition: 0.3s all;
+              top: 78px;
+              visibility: visible;
+              opacity: 1;
+              z-index: 10;
+            }
+          }
+          li {
+            &:hover .menu-link {
+              color: $color-moss-green;
+            }
+            .menu-link {
+              font-size: 15px;
+              line-height: 17.58px;
+              font-weight: 500;
+              color: $color-text;
+              margin-left: 40px;
+              padding: 30px 0;
+            }
+            position: relative;
+            .drop-down {
+              width: 199px;
+              visibility: hidden;
+              position: absolute;
+              z-index: -1;
+              opacity: 0;
+              background-color: #fff;
+              display: inline-block;
+              transition: 0.3s all;
+              left: 17px;
+              top: 100px;
+              .menu-link-drop {
+                padding: 13.5px 24px;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 17.58px;
+                font-weight: 400;
+                color: $color-text;
+                &:hover {
+                  color: $color-moss-green;
+                  background-color: $color-background;
+                }
+              }
+            }
+          }
+        }
+      }
+      .overlay-menu {
+        display: none;
+      }
+      .header__menu-mobi {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    .header__menu_all {
+      .header__menu {
+        margin: 15px 0;
+        .list__menu {
+          padding-top: 10px;
+          width: 300px;
+          position: fixed;
+          height: 100vh;
+          background: #fff;
+          z-index: 7;
+          opacity: 0;
+          top: 92px;
+          right: -300px;
+          transition: all 0.2s linear;
+          &.active {
+            opacity: 1;
+            right: 0;
+            top: 140px;
+            &.menu-scroll {
+              top: 60px;
+            }
+          }
+          .menu {
+            padding-top: 20px;
+            flex-direction: column;
+            .menu-link {
+              margin-left: 30px;
+              margin-bottom: 30px;
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+        }
+        .overlay-menu {
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          z-index: 6;
+          top: 60px;
+          background-color: rgba(23, 27, 26, 0.3);
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.2s linear;
+        }
+        .overlay-menu.active {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+          margin-top: 80px;
+          margin-left: -22px;
+          &.overlay-scroll {
+            margin-top: 32px;
+          }
+        }
+        .header__menu-mobi {
+          display: block;
+          .header__menu-toggler {
+            cursor: pointer;
+            span {
+              background-color: $color-moss-green;
+              width: 30px;
+              height: 3px;
+              display: block;
+              margin-bottom: 5px;
+              border-radius: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 729px) {
+  .header {
+    .header__top_on {
+      .header__top {
+        flex-direction: column;
+        .hotline {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
