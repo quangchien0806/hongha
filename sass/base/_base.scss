@@ -44,11 +44,14 @@ button {
 }
 
 .container {
+  max-width: 1210px;
+  margin: 0 auto;
   padding: 0 15px;
 }
 .mb80 {
   margin-bottom: 80px;
 }
+
 @media (max-width: 1920px) {
   .container {
     max-width: 1210px;
