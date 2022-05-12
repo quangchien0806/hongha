@@ -17,6 +17,10 @@
     width: 370px;
     height: 247px;
     margin-bottom: 8px;
+    &:hover {
+      opacity: 0.5;
+      transition: all 0.5s ease;
+    }
   }
   .text-product {
     padding: 0 17px;

@@ -69,21 +69,31 @@
         margin-bottom: 16px;
       }
       .send__form {
+        position: relative;
         @include flex(flex-center, space-between);
         background-color: transparent;
-        padding: 14px;
-        border: 1px solid #505050;
         border-radius: 2px;
+
         .send__input {
           border: none;
           background-color: transparent;
           font-size: 14px;
           line-height: 16px;
+          width: 100%;
+          padding: 14px;
+          border: 1px solid #505050;
           color: $color-time-day;
+          &:focus {
+            border: 1px solid $color-moss-green;
+          }
         }
         .send__button {
           background-color: transparent;
           border: none;
+          position: absolute;
+          right: 16px;
+          top: 50%;
+          transform: translateY(-50%);
           cursor: pointer;
         }
       }
