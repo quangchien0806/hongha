@@ -20,6 +20,10 @@
         margin-bottom: 16px;
         .logo-footer {
           margin-right: 12px;
+          &.hotline {
+            margin-top: -2px;
+            margin-right: 9px;
+          }
         }
         .text-footer {
           font-size: 14px;
@@ -61,7 +65,7 @@
       }
     }
     .contact__mail {
-      width: 30%;
+      width: 24%;
       .text-contact {
         font-size: 13px;
         line-height: 24px;
@@ -125,21 +129,41 @@
 
 @media (max-width: 768px) {
   .footer {
+    padding-top: 45px;
     .footer__list {
+      justify-content: start;
+      padding-bottom: 10px;
+      .text-content {
+        margin-bottom: 15px;
+      }
       .contact {
-        width: 50%;
+        width: 55%;
         margin-bottom: 20px;
       }
       .products {
-        width: 30%;
+        width: 45%;
         margin-bottom: 20px;
+        &.information {
+          width: 55%;
+        }
+        .list-all {
+          .footer-link {
+            margin-bottom: 10px;
+          }
+        }
       }
       .contact__mail {
-        width: 50%;
+        width: 45%;
       }
     }
     .follow {
+      width: 100%;
+
       margin-top: 30px;
+      flex-direction: column;
+      .list__icon {
+        margin-bottom: 10px;
+      }
     }
   }
 }

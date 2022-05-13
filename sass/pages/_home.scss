@@ -18,6 +18,7 @@
   .owl-theme {
     .owl-nav {
       color: $color-hotline;
+      margin-top: 0;
       .owl-prev {
         position: absolute;
         top: 50%;
@@ -25,14 +26,6 @@
         transform: translateY(-80%);
         &:hover {
           background: transparent;
-        }
-        span {
-          font-weight: 100;
-          font-size: 120px;
-          transition: all 0.3s ease;
-          &:hover {
-            font-size: 140px;
-          }
         }
       }
       .owl-next {
@@ -159,10 +152,12 @@
   padding-bottom: 80px;
 
   .list__products {
-    @include flex(flex-start, space-between, wrap);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-gap: 30px;
+    margin-bottom: 56px;
     width: 100%;
     .product {
-      width: 32%;
       margin-bottom: 37px;
       border: 1px solid $color-hotline;
       transition: all 0.2s linear;
@@ -170,6 +165,7 @@
         transform: translateY(-4px);
       }
       .img-product {
+        width: 100%;
         height: 251px;
       }
       .product-name {
@@ -194,18 +190,19 @@
   padding-top: 63px;
   padding-bottom: 42px;
   &_details {
-    @include flex(flex-start, space-between, wrap);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 30px;
+    margin-bottom: 56px;
     .news-details {
-      width: 270px;
       margin-bottom: 30px;
-
       .img-news-all {
         overflow: hidden;
         .img-news {
+          width: 100%;
           height: 180px;
           margin-bottom: 8px;
           transition: all 0.3s ease;
-
           &:hover {
             transform: scale(1.1);
           }
@@ -223,6 +220,10 @@
         color: $color-name-prd;
         font-weight: 500;
         transition: all 0.3s ease;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
         &:hover {
           color: $color-moss-green;
         }
@@ -297,8 +298,8 @@
   }
   .product__all {
     .list__products {
+      grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
       .product {
-        width: 48%;
         height: 278px;
         .img-product {
           height: 226px;
@@ -312,20 +313,41 @@
 }
 @media (max-width: 729px) {
   .sliders__home {
-    .sliders__home_all {
-      .slider__home_child {
-        .text__slider-home {
-          margin-left: 15px;
+    .owl-theme {
+      .owl-nav {
+        .owl-prev {
+          img {
+            height: 30px;
+          }
+        }
+        .owl-next {
+          img {
+            height: 30px;
+          }
         }
       }
+    }
+    .sliders__home_all {
+      .slider__home_child {
+        height: 400px;
+        .text__slider-home {
+          margin-left: 35px;
+          margin-top: 90px;
+        }
+      }
+    }
+  }
+  .product__news {
+    &_details {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
   }
 }
 @media (max-width: 590px) {
   .product__all {
     .list__products {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       .product {
-        width: 48%;
         height: 240px;
         .img-product {
           height: 188px;
@@ -337,10 +359,8 @@
     }
   }
   .product__news {
-    .product__news_details {
-      .news-details {
-        width: 48%;
-      }
+    &_details {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
   }
 }
@@ -367,7 +387,6 @@
     padding-bottom: 0;
     .list__products {
       .product {
-        width: 48%;
         height: 240px;
         .img-product {
           height: 188px;

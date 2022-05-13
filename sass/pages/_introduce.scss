@@ -20,6 +20,10 @@
           font-size: 17px;
           line-height: 30px;
           color: $color-text;
+          display: -webkit-box;
+          -webkit-line-clamp: 12;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
       }
       .img-introduce {

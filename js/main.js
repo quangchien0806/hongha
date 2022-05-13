@@ -4,6 +4,7 @@ const header_menu = document.querySelector(".list__menu");
 const overlay = document.querySelector(".overlay-menu");
 const header_sticky = document.querySelector("#one");
 const scrollUp_up = document.querySelector(".scrollUp__up");
+const menu_link = document.querySelector(".menu-link");
 
 //
 
@@ -12,8 +13,8 @@ scrollUp_up.addEventListener("click", scrollToTop);
 function scrollToTop() {
   var position = document.body.scrollTop || document.documentElement.scrollTop;
   if (position) {
-    window.scrollBy(0, -Math.max(1, Math.floor(position / 10)));
-    scrollAnimation = setTimeout("scrollToTop()", 30);
+    window.scrollBy(0, -Math.max(5, Math.floor(position / 10)));
+    scrollAnimation = setTimeout("scrollToTop()", 20);
   } else clearTimeout(scrollAnimation);
 }
 
@@ -71,7 +72,7 @@ mobi_togglers.addEventListener("click", () => {
   overlay.classList.toggle("active");
 });
 overlay.addEventListener("click", () => {
-  overlay.classList.remove("active");
+  overlay.classList.add("active");
   header_menu.classList.remove("active");
 });
 
@@ -104,32 +105,3 @@ $(".owl-carousel").owlCarousel({
     },
   },
 });
-
-// scroll detailed
-// const scrollElems = document.querySelectorAll(".scroll");
-// // Now add an event listeners to those element
-// for (let i = 0; i < scrollElems.length; i++) {
-//   const elem = scrollElems[i];
-
-//   elem.addEventListener("click", function (e) {
-//     e.preventDefault();
-
-//     // 1. Get the element id to which you want to scroll
-//     const scrollElemId = e.target.href.split("#")[1];
-
-//     // 2. find that node from the document
-//     const scrollEndElem = document.getElementById(scrollElemId);
-
-//     // 3. and well animate to that node..
-//     const anim = requestAnimationFrame((timestamp) => {
-//       const stamp = timestamp || new Date().getTime();
-//       const duration = 2200;
-//       const start = stamp;
-
-//       const startScrollOffset = window.pageYOffset;
-//       const scrollEndElemTop = scrollEndElem.getBoundingClientRect().top;
-
-//       scrollToElem(start, stamp, duration, scrollEndElemTop, startScrollOffset);
-//     });
-//   });
-// }
