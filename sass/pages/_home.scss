@@ -82,7 +82,7 @@
   }
   .sliders__home_all {
     .slider__home_child {
-      height: 500px;
+      height: auto;
       position: relative;
       width: 100%;
       .img__slider1-home {
@@ -105,10 +105,13 @@
       .text__slider-home {
         position: absolute;
         width: 380px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         z-index: 5;
         top: 0;
         margin-left: 155px;
-        margin-top: 134px;
         .text__slider-title {
           font-size: 48px;
           line-height: 56px;
@@ -248,13 +251,19 @@
       }
     }
   }
+  .product__all {
+    .list__products {
+      margin-bottom: 0;
+    }
+  }
+  .product__news {
+    padding-bottom: 1px;
+  }
 }
 @media (max-width: 768px) {
   .sliders__home {
     .sliders__home_all {
       .slider__home_child {
-        .img__slider1-home {
-        }
         .list__img-home {
           .img__slider-left-home {
             width: auto;
@@ -265,12 +274,7 @@
           }
         }
         .text__slider-home {
-          position: absolute;
-          width: 380px;
-          z-index: 5;
-          top: 0;
-          margin-left: 155px;
-          margin-top: 134px;
+          margin-left: 35px;
           .text__slider-title {
             font-size: 48px;
             line-height: 56px;
@@ -317,22 +321,41 @@
       .owl-nav {
         .owl-prev {
           img {
-            height: 30px;
+            height: 23px;
           }
         }
         .owl-next {
           img {
-            height: 30px;
+            height: 23px;
           }
         }
       }
     }
     .sliders__home_all {
       .slider__home_child {
-        height: 400px;
+        height: 270px;
         .text__slider-home {
           margin-left: 35px;
-          margin-top: 90px;
+          .text__slider-title {
+            font-size: 38px;
+            line-height: 46px;
+            color: #fff;
+            font-weight: 500;
+            margin-bottom: 14px;
+          }
+          .text-slider {
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 20px;
+          }
+          .btn-detail {
+            border: none;
+            background: #fff;
+            padding: 10px 28px;
+            i {
+              margin-left: 4px;
+            }
+          }
         }
       }
     }
@@ -369,7 +392,7 @@
     .sliders__home_all {
       .slider__home_child {
         .text__slider-home {
-          margin-left: 15px;
+          margin-left: 35px;
           width: 220px;
           .text__slider-title {
             font-size: 38px;
