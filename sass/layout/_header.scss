@@ -71,6 +71,12 @@
               color: $color-text;
               margin-left: 40px;
               padding: 30px 0;
+              &.active {
+                color: $color-moss-green;
+              }
+              &:focus {
+                color: $color-moss-green;
+              }
             }
             position: relative;
             .drop-down {
@@ -139,7 +145,7 @@
           right: 0;
           top: 0;
           width: 300px;
-          height: 100vh;
+          height: 70vh;
           transform: translateX(100%);
           transition: all 0.2s linear;
           opacity: 0;
@@ -156,13 +162,10 @@
             // }
           }
           .menu {
-            padding-top: 20px;
             flex-direction: column;
             .menu-link {
               margin-left: 30px;
-              margin-bottom: 30px;
               font-size: 16px;
-              line-height: 24px;
             }
           }
         }
@@ -207,6 +210,9 @@
     .header__top_on {
       .header__top {
         flex-direction: column;
+        .text__ionex {
+          display: none;
+        }
         .hotline {
           width: 100%;
         }

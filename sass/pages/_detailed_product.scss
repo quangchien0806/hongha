@@ -257,17 +257,20 @@
     }
   }
 }
-@media (max-width: 1157px) {
+
+@media (max-width: 1225px) {
   .feature {
     padding-bottom: 0;
     .list__feature {
       .feature-link {
+        font-size: 12px;
         margin-bottom: 20px;
+        padding: 15px 22px;
       }
     }
   }
 }
-@media (max-width: 1225px) {
+@media (max-width: 1157px) {
   .feature {
     padding-bottom: 0;
     .list__feature {
