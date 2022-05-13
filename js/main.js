@@ -4,9 +4,17 @@ const header_menu = document.querySelector(".list__menu");
 const overlay = document.querySelector(".overlay-menu");
 const header_sticky = document.querySelector("#one");
 const scrollUp_up = document.querySelector(".scrollUp__up");
-const menu_link = document.querySelector(".menu-link");
+const menu_link = document.querySelectorAll(".menu-link");
 
 //
+const currentLocation = location.href;
+const menuLength = menu_link.length;
+console.log(menuLength);
+for (let i = 0; i < menuLength; i++) {
+  if (menu_link[i].href === currentLocation) {
+    menu_link[i].className = "menu-link active";
+  }
+}
 
 scrollUp_up.addEventListener("click", scrollToTop);
 

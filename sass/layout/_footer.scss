@@ -19,11 +19,10 @@
         display: flex;
         margin-bottom: 16px;
         .logo-footer {
+          margin-top: -2px;
           margin-right: 12px;
-          &.hotline {
-            margin-top: -2px;
-            margin-right: 9px;
-          }
+          width: 18px;
+          height: 18px;
         }
         .text-footer {
           font-size: 14px;

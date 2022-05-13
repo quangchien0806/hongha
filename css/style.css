@@ -1318,10 +1318,10 @@ button {
         display: flex;
         margin-bottom: 16px; }
         .footer .footer__list .contact .contact-type .logo-footer {
-          margin-right: 12px; }
-          .footer .footer__list .contact .contact-type .logo-footer.hotline {
-            margin-top: -2px;
-            margin-right: 9px; }
+          margin-top: -2px;
+          margin-right: 12px;
+          width: 18px;
+          height: 18px; }
         .footer .footer__list .contact .contact-type .text-footer {
           font-size: 14px;
           line-height: 24px;
