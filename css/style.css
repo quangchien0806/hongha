@@ -1135,7 +1135,7 @@ button {
       line-height: 30px;
       color: #363636;
       margin-bottom: 30px; }
-  .content__detailed .img-detailed {
+  .content__detailed img {
     width: 100%;
     height: 500px;
     margin-bottom: 32px;
@@ -1342,7 +1342,8 @@ button {
           margin-top: -2px;
           margin-right: 12px;
           width: 18px;
-          height: 18px; }
+          height: 18px;
+          object-fit: contain; }
         .footer .footer__list .contact .contact-type .text-footer {
           font-size: 14px;
           line-height: 24px;
