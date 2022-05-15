@@ -1016,7 +1016,7 @@ button {
   box-shadow: 8px 12px 8px 7px #e8e8e8;
   margin-bottom: 34px; }
   .product-new .img-new {
-    width: 370px;
+    width: 100%;
     height: 247px;
     margin-bottom: 8px; }
     .product-new .img-new:hover {
